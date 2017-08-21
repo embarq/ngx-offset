@@ -1,0 +1,27 @@
+.parent {
+  font-size: 4rem;
+  font-family: monospace;
+  font-weight: 600;
+  text-align: center;
+  padding: 8px;
+  position: relative;
+}
+.dependency, .target {
+  border: 4px dashed;
+  border-radius: 8px;
+  padding: 16px 0;
+}
+.dependency {
+  border-color: green;
+}
+.target {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  border-color: purple;
+}
+.toolbar {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}

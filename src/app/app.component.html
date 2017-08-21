@@ -1,0 +1,19 @@
+<div class="parent" [ngxOffsetContainer]="updater$">
+  <div #dependency class="dependency" ngxOffsetSource="offsetHeight" ngxOffsetValueType="px">
+    Depenency
+  </div>
+  <div class="target" ngxOffsetTarget="margin-top">
+    Target
+  </div>
+</div>
+<div class="toolbar">
+  <button (click)="toggle()">
+    Toggle
+  </button>
+  <button (click)="inc()">
+    Increase
+  </button>
+  <button (click)="dec()">
+    Decrease
+  </button>
+</div>
