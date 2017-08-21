@@ -1,5 +1,5 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
-import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Subject } from 'rxjs/Subject';
 
 @Component({
   selector: 'app-root',
@@ -10,13 +10,13 @@ export class AppComponent {
   @ViewChild('dependency')
   public dependency: ElementRef;
 
-  public updater$: BehaviorSubject<void>;
+  public updater$: Subject<void>;
 
   constructor() {
-    this.updater$ = new BehaviorSubject<void>(void 0);
+    this.updater$ = new Subject<void>();
   }
   public toggle() {
-    this.updater$.next(void 0);
+    this.updater$.next();
   }
   public inc() {
     const init = (this.dependency.nativeElement as HTMLElement).offsetHeight;
