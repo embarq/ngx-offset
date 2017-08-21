@@ -15,9 +15,12 @@ export class OffsetSourceDirective {
   public offsetProperty: OffsetProperty;
 
   @Input('ngxOffsetValueType')
-  public ngxOffsetValueType: any;
+  public valueType: string;
 
-  constructor(public element: ElementRef) { }
+  constructor(public element: ElementRef) {
+    this.offsetProperty = 'offsetHeight';
+    this.valueType = 'px';
+  }
 
   public getOffset<T extends HTMLElement>() {
     return (this.element.nativeElement as T)[this.offsetProperty];
