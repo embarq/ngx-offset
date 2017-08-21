@@ -30,11 +30,16 @@ export class OffsetContainerDirective implements AfterContentInit {
     }
   }
 
-  public ngAfterContentInit() {
+  public ngOnInit() {
     if (typeof this.updateToggle !== 'undefined') {
       this.updateToggle.subscribe(() => this.provideOffset());
     }
-    this.provideOffset();
+  }
+
+  public ngAfterContentInit() {
+    if (typeof this.updateToggle === 'undefined') {
+      this.provideOffset();
+    }
   }
 
 }
