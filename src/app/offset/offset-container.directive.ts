@@ -25,7 +25,7 @@ export class OffsetContainerDirective implements AfterContentInit {
 
   public provideOffset() {
     if (this.offsetSource != null && this.offsetTarget != null) {
-      const offsetValue = this.offsetSource.getOffset() + this.offsetSource.ngxOffsetValueType;
+      const offsetValue = this.offsetSource.getOffset() + this.offsetSource.valueType;
       this.offsetTarget.update(offsetValue);
     }
   }
