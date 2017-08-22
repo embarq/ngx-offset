@@ -14,23 +14,23 @@
     "copy-metadata": "find build/* -not -name '*.js' -exec cp {} dist \\;",
     "ngc": "ngc -p tsconfig.build.json",
     "rollup:fesm": "rollup build/ngx-offset.js -o dist/ngx-offset.js --format es",
-    "rollup:umd": "rollup build/ngx-offset.js -o dist/ngx-offset.umd.js --format 'umd' --name ngxOffset"
+    "rollup:umd": "rollup build/ngx-offset.js -o dist/ngx-offset.umd.js --format umd --name ngxOffset"
   },
   "peerDependencies": {
-    "@angular/common": "^4.3.5",
-    "@angular/core": "^4.3.5"
+    "@angular/common": "~4.0.0",
+    "@angular/core": "~4.0.0",
+    "rxjs": "~5.0.0",
+    "typescript": "~2.3.0",
+    "zone.js": "^0.7.0"
   },
   "devDependencies": {
     "@angular/cli": "1.2.7",
-    "@angular/compiler": "^4.3.5",
-    "@angular/compiler-cli": "^4.3.5",
-    "@angular/platform-browser": "^4.3.5",
-    "@angular/platform-browser-dynamic": "^4.3.5",
+    "@angular/compiler": "4.0.0",
+    "@angular/compiler-cli": "4.0.0",
+    "@angular/platform-browser": "4.0.0",
+    "@angular/platform-browser-dynamic": "4.0.0",
     "core-js": "^2.4.1",
-    "rollup": "^0.48.2",
-    "rxjs": "^5.4.1",
-    "typescript": "~2.3.3",
-    "zone.js": "^0.8.14"
+    "rollup": "^0.48.2"
   },
   "repository": {
     "type": "git",
@@ -39,9 +39,5 @@
   "bugs": {
     "url": "https://github.com/embarq/ngx-offset/issues"
   },
-  "homepage": "https://github.com/embarq/ngx-offset#readme",
-  "dependencies": {
-    "@angular/common": "^4.3.5",
-    "@angular/core": "^4.3.5"
-  }
+  "homepage": "https://github.com/embarq/ngx-offset#readme"
 }
